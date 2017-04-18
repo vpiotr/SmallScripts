@@ -2,9 +2,9 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.open(
 	"GET", 
 	'https://raw.githubusercontent.com/pixellos/SmallScripts/master/TROLS.Json',
-	true);
+	false);
 xmlhttp.send();
-var trolls = xmlhttp.responseText;
+var trolls = JSON.parse(xmlhttp.responseText);
 
 trolls.forEach(function(trol)
 {
