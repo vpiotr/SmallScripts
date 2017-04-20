@@ -10,4 +10,5 @@ trolls.forEach(function(trol)
 {
 $(".col-user > h5 > a").filter(function() { return $(this).text() == trol;}).each(function() { $(this).parent().parent().parent().parent().remove();  })
 $(".media > .media-body > p > a").filter(function() { return $(this).text() == trol;}).each(function() { $(this).parent().parent().parent().remove(); })
+$(".media-body > .media-heading > a").filter(function() { return $(this).text() ==  trol;}).each( function() {$(this).parent().parent().parent().remove();} )
 });
