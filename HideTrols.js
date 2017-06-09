@@ -27,6 +27,14 @@ trolls.forEach(function(trol)
 		}).each(function() {
 			$(this).parent().parent().parent().remove(); 
 		});
+	//Komentarz w poscie
+	$(".comments > div > a[data-user-id]")
+		.filter(function() 
+		{
+			return $(this).text().match(trollReg);
+		}).each(function() {
+			$(this).parent().remove(); 
+		});                
 	//Mikroblog
 	$(".media-body > .media-heading > a")
 		.filter(function() 
